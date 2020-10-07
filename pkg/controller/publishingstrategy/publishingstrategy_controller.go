@@ -176,7 +176,7 @@ func (r *ReconcilePublishingStrategy) Reconcile(request reconcile.Request) (reco
 		return reconcile.Result{}, err
 	}
 
-	masterList, err := utils.GetMasterMachines(r.client)
+	masterList, err := utils.(r.client)
 	if err != nil {
 		log.Error(err, "Couldn't fetch list of master nodes")
 		return reconcile.Result{}, err
